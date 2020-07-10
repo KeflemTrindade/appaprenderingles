@@ -6,4 +6,6 @@ import {Component} from '@angular/core';
     templateUrl: './topo.component.html',
     styleUrls: ['topo.component.css']
 })
-export class TopoComponent {}
+export class TopoComponent {
+    public titulo: string = 'Aprendendo Inglês';
+}
