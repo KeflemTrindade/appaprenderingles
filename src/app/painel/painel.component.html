@@ -1,35 +1,38 @@
 <div class="container">
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-sm-6">
-                <app-progresso>Progresso</app-progresso>
-            </div>
-            <div class="col-sm-6">
-                <div class="d-flex justify-content-end">
-                    <app-tentativas>Tentativas</app-tentativas>
-                </div>
-            </div>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-6">
+        <app-progresso>Progresso</app-progresso>
+      </div>
+      <div class="col-sm-6">
+        <div class="d-flex justify-content-end">
+          <app-tentativas>Tentativas</app-tentativas>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <h6>Traduza a frase</h6>
-                <p>How are you?</p>
-
-                <div class="form-group">
-                    <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="d-flex justify-content-end ">
-                    <button type="button" class="btn btn-primary">Verificar</button>
-                </div>
-            </div>
-        </div>
-
-
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col">
+        <h6>{{ instrucao }}</h6>
+        <p>{{ rodadaFrase.frase_en }}</p>
+
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            cols="10"
+            rows="10"
+            (input)="atualizarResposta($event)"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-primary" (click)="verificarResposta()">Verificar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
